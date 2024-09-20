@@ -1,0 +1,11 @@
+rendre active hebergements
+
+
+
+------- activités ----------------
+
+shadow 
+hauteur a regler
+
+pas le meme rendu d'image herbergements
+regler l'espace en bas et rajouter 4 de gap avant le titre

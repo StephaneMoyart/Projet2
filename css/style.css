@@ -1,6 +1,9 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 :root {
@@ -22,7 +25,12 @@ body {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.1875rem;
 }
 
 a {
@@ -48,6 +56,7 @@ a {
 
 .card-title {
     font-size: 16px;
+    font-weight: bold;
 }
 
 .euro {
@@ -58,22 +67,217 @@ a {
     color: var(--main-bg-color)
 }
 
+/******* Header **********/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.9rem;
+    height: 4.9375rem;
+}
+
+.LogoMain {
+    padding: 30px 0;
+}
+
+.logo {
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    gap: 4rem;
+}
+
+nav a {
+    border-top: 2px solid transparent;
+    height: 50px;
+    align-content: center;
+}
+
+nav a:hover {
+    color: var(--main-color);
+    border-top: 2px solid var(--main-color);
+}
+
+/****** searchsection ********/
+
+.searchSection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.searchHead {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+/*(form)*/
+.searchForm form {
+    display: flex;
+    height: 49px;
+}
+
+.searchMinia {
+    background-color: var(--main-bg-color);
+    height: 100%;
+    width: 50px;
+    position: relative;
+    border-radius: 15px 0 0 15px;
+}
+
+.searchMinia i {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+
+}
+
+.searchText {
+    width: 195px;
+    height: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    border-top: 1px solid var(--main-bg-color);
+    border-bottom: 1px solid var(--main-bg-color);
+    border-left : none;
+    border-right: none;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.searchSubmit {
+    padding: 15px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #0065FC;
+    border: none;
+    border-radius: 0 15px 15px 0;
+    font-size: 1rem;
+}
+
+/*(filters)*/
+
+.filters {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    height: 50px;
+}
+
+.filtersTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.filtersFa {
+    transform: scale(1.2);
+}
+
+.filtersButton {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    height: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid var(--main-bg-color);
+    border-radius: 25px;
+    padding: 4px 19px;
+}
+
+.filtersButton:hover {
+    background-color: var(--filter-bg-color);
+}
+
+/* info */
+/* pas trouvé de minia info sur font awesome ??! fait maison en attendant*/
+
+.searchInfo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+/* .searchInfo div {
+    padding: 3px;
+    display: flex;
+    width: 1rem;
+    border: 2px solid var(--main-bg-color);
+    justify-content: center;
+    border-radius: 150px;
+}
+
+.searchI {
+    transform: scale(0.7);
+} */
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    /* margin-top: 2.2rem; */
 }
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
     padding: 30px;
-    box-sizing: border-box;
 }
 
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.875rem;
+}
+
+.hebergementsCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.875rem;
+}
+
+.hebergementsCards a {
+    /* width: 30.8685%; */
+    width: calc(100%/3 - (1.875rem * 2 / 3));
+}
+
+.hebergementCard {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    padding-bottom: 10px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.hebergementCard img {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    border: 5px solid white;
+}
+
+.hebergementCardContent, .hebergementCardText {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.hebergementCardContent {
+    padding: 0 15px;
 }
 
 /****** Populaires ***********/
@@ -105,7 +309,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
 }
 
 .populaires-cards .card-title {
@@ -121,8 +324,74 @@ a {
     margin-bottom: 5px;
 }
 
+/* Activités à marseille */
 
+.activitiesContainer {
+    padding: 1.875rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.875rem;
+    /* margin-top: 2.2rem; */
+}
 
+.activities {
+    display: flex;
+    gap: 1.875rem;
+    justify-content: space-between;
+    
+}
+
+.activity {
+    display: flex;
+    width: 25%;
+    max-height: 440px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    /* why */
+}
+
+.activity a {
+    display: flex;
+}
+
+.activityContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.activity img {
+    width: 100%;
+    flex-grow: 1;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.activityText {
+    padding: 1.25rem;
+}
+    
+/* footer */
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-bg-color);
+    margin-top: 2.1875rem;
+}
+
+.footerTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footerContent {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    gap: 1rem;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
