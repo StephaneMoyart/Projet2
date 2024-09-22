@@ -24,7 +24,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
-    min-width: 320px;
+    min-width: 304px;
     padding: 0 50px;
 }
 
@@ -540,12 +540,21 @@ nav a:hover {
 
     /* form phone*/
 
+    .searchForm {
+      
+    }
+
+    .searchText {
+        flex: 1;
+    }
+
     .searchSubmit {
         display: none;
     }
 
     .searchSubmitMobile {
         display: block;
+        margin-left: -12px;
         width: 50px;
         border-radius: 15px;
         border: none;
@@ -567,6 +576,7 @@ nav a:hover {
     } */
 
     .filtersButtons {
+        width: 100%;
         flex-wrap: wrap;
         column-gap: 10px;
         row-gap: 20px;

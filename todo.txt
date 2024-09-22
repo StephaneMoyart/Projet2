@@ -1,5 +1,0 @@
-rendre active hebergements ?
-quel comportement au passage sur mobile (lordque nous sommes plus proche de 600 que de 3xx px)
-rem vs pixels wich case
-search border
-
